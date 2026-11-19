@@ -1,0 +1,47 @@
+# Virtual Environments - Each task has its own
+task1_lora_finetuning/venv_task1/
+task2_rag_from_scratch/venv_task2/
+task3_local_optimization/venv_task3/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Data and Models
+task1_lora_finetuning/data/
+task1_lora_finetuning/results/
+task1_lora_finetuning/lora_model/
+task2_rag_from_scratch/data/
+task2_rag_from_scratch/indices/
+task2_rag_from_scratch/results/
+task3_local_optimization/models/
+task3_local_optimization/results/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Report drafts
+report/*.aux
+report/*.out
+report/*.toc

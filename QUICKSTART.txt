@@ -1,0 +1,76 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                   LLM TASKS - QUICK REFERENCE                        ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+📋 SETUP (One Time)
+───────────────────────────────────────────────────────────────────────
+Windows:     setup_all.bat
+Linux/macOS: ./setup_all.sh
+Verify:      python verify_setup.py
+
+📁 TASK 1: LoRA Fine-tuning
+───────────────────────────────────────────────────────────────────────
+cd task1_lora_finetuning
+Activate: call venv_task1\Scripts\activate.bat  (Windows)
+          source venv_task1/bin/activate        (Linux/macOS)
+
+python prepare_dataset.py    # Generate data
+python finetune_lora.py       # Train (15-20 min)
+python evaluate.py            # Test accuracy
+
+📁 TASK 2: RAG from Scratch
+───────────────────────────────────────────────────────────────────────
+cd task2_rag_from_scratch
+Activate: call venv_task2\Scripts\activate.bat  (Windows)
+          source venv_task2/bin/activate        (Linux/macOS)
+
+python prepare_corpus.py      # Create documents
+python build_index.py         # Build FAISS index
+python evaluate_retrieval.py  # Test Recall@5
+
+📁 TASK 3: Model Optimization
+───────────────────────────────────────────────────────────────────────
+cd task3_local_optimization
+Activate: call venv_task3\Scripts\activate.bat  (Windows)
+          source venv_task3/bin/activate        (Linux/macOS)
+
+python compare_quantization.py  # Benchmark FP16 vs INT8
+
+🔧 TROUBLESHOOTING
+───────────────────────────────────────────────────────────────────────
+Import errors?     → Check you're in right venv (which python / where python)
+CUDA out of mem?   → Use CPU (all tasks work, just slower)
+Setup failed?      → Check Python 3.8+ installed (python --version)
+
+📖 FULL DOCUMENTATION
+───────────────────────────────────────────────────────────────────────
+Open README.md for complete instructions and explanations
+
+⏱️  ESTIMATED TIME
+───────────────────────────────────────────────────────────────────────
+Setup:   10 minutes
+Task 1:  30-45 minutes
+Task 2:  20-30 minutes
+Task 3:  15-25 minutes
+Total:   ~2-3 hours
+
+✅ DELIVERABLES CHECKLIST
+───────────────────────────────────────────────────────────────────────
+Task 1: [  ] Base vs fine-tuned comparison
+        [  ] LoRA settings explained
+        [  ] 3 failure cases
+        [  ] GPU memory calculations
+
+Task 2: [  ] 15 test questions
+        [  ] Recall@5 measured
+        [  ] 2 failure cases
+        [  ] BM25 & re-ranker explained
+
+Task 3: [  ] FP16 vs INT8 benchmarked
+        [  ] 10 prompts tested
+        [  ] KV cache explained
+        [  ] Serving plan documented
+
+═══════════════════════════════════════════════════════════════════════
+                      YOU'RE READY TO GO! 🚀
+═══════════════════════════════════════════════════════════════════════

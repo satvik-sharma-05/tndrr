@@ -1,0 +1,10 @@
+numpy>=1.24.0
+faiss-cpu>=1.7.4  # Use faiss-gpu if you have CUDA
+sentence-transformers>=2.2.2
+PyPDF2>=3.0.0
+requests>=2.31.0
+tqdm>=4.65.0
+openai>=1.0.0  # For final answer generation (or use local model)
+rank-bm25>=0.2.2  # For BM25 comparison
+transformers>=4.36.0
+torch>=2.0.0
